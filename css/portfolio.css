@@ -4,10 +4,17 @@ html,
 body {
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 
-.top-button {
+.all-container {
+      
+}
+
+.all-container .top-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 60px;
     height: 60px;
     border: 1px solid rgb(89, 89, 89);
@@ -16,22 +23,32 @@ body {
     position: fixed;
     right: 50px;
     bottom: 50px;
+    transition: 0.3s;
+}
+
+.top-button:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.gnb {
+ 
+    padding-top:50px;
 }
 
 .nav-menu {
-    margin: 50px auto;
+    
     display: flex;
     align-items: center;
     padding: 20px 170px;
-    width: 100%;
+  
     gap: 60px;
     /* border: 1px solid gold; */
     position: relative;
 }
 
 .nav-menu a {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .nav-menu::after {
@@ -47,9 +64,10 @@ body {
 /* main */
 
 .main-container {
-    width: 100%;
-    height: 720px;
+    width: 100%; 
+   overflow:hidden;
     /* border: 1px solid red; */
+    position: relative;
 }
 
 .heading {
@@ -70,31 +88,102 @@ body {
     translate:0 -10px;
 }
 
-.main-container p {
-    width: 100%;
-    max-width: 1200px;
-    padding-left: 300px;
-}
-
 .main-container h1 {
-    font-size: 200px;
+    font-size: 160px;
     font-weight: 700; 
     line-height:1;
     white-space:nowrap;
 }
 
 .main-container p {
-    font-size: 1rem;
+    width: 100%;
+    max-width: 1000px;
+    padding-left: 300px;
+    font-size: 20px;
+    line-height: 2.5rem;
+    text-align: justify;
 }
 
-.people-container {
+/* 배경이미지 */
+
+.main-container .bg-image {
     width:100%;
     max-width:500px;
     z-index: -1;
     top: 0;
     position:absolute;
     right:20px;
+    top: 10px;
+
 }
+
+.floating-popple {
+    background-color:gold;
+}
+
+.floating-people img {
+    position:absolute;
+    right:-200px;
+    height: 50px;
+    animation: goLeft ease-out infinite alternate both;
+    transition: 0.6s ease;
+}
+
+.floating-people img:hover {
+    transform: scale(1.7)
+}
+
+.floating-people .p1 {
+    top: 37px;
+    animation-duration: 24s;
+}
+
+.floating-people .p2 {
+    top: 113px;
+    animation-duration: 30s;
+}
+.floating-people .p3 {
+    top: 174px;
+    animation-duration: 60s;
+}
+.floating-people .p4 {
+    top: 226px;
+    animation-duration: 80s;
+}
+.floating-people .p5 {
+    top: 305px;
+    animation-duration: 70s;
+}
+.floating-people .p6 {
+    top: 362px;
+    animation-duration: 110s;
+}
+.floating-people .p7 {
+    top: 416px;
+    animation-duration: 20s;
+}
+.floating-people .p8 {
+    top: 450px;
+    animation-duration: 30s;
+}
+.floating-people .p9 {
+    top: 538px;
+    animation-duration: 90s;
+}
+.floating-people .p10 {
+    top: 590px;
+    animation-duration: 40s;
+}
+.floating-people .p11 {
+    top: 650px;
+    animation-duration: 50s;
+}
+.floating-people .p12 {
+    top: 700px;
+    animation-duration: 80s;
+}
+
+/* 메인 태그 이미지 */
 
 .main-container .tag-container {
     margin-top: 300px;
@@ -119,6 +208,11 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 70px;
     font-size: 3rem;
+    transition: 0.6s ease;
+}
+
+.tag-container .tag li:hover {
+    background: rgba(53, 58, 63, 0.1);
 }
 
 .tag li img {
@@ -130,7 +224,7 @@ body {
 .page-main { 
     width:100%;
     max-width:1600px;
-    margin:0 auto;
+    margin:200px auto;
 }
 
  
@@ -138,6 +232,7 @@ body {
     font-size: 70px;
     font-weight: 500;
     margin-bottom: 20px;
+    text-align: right;
 }
 
 .uxui-container .list{
@@ -148,8 +243,8 @@ body {
 }
 
 .uxui-container .list li {
- width: 330px; 
-  border-radius: 30px;
+    width: 330px; 
+    border-radius: 30px;
     position: relative;
     overflow: hidden;
     padding:20px;
@@ -183,30 +278,36 @@ body {
     background:linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(128, 128, 128, 1) 100%); 
 }
 
+.uxui-container .sparkle .sparkle-logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
 .uxui-container .sparkle .sparkle-charactor {
     position: absolute;
     right: -120px;
     top: 30%;
 }
 
-.uxui-container .sparkle .sparkle-logo {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-}
 
 .uxui-container .habit {
     background-image: url(../images/porfolio_img/bg_habit.svg);
     
 }
 
+.uxui-container .habit .habit-logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
 .uxui-container .habit .char {
    position: absolute;
-    right:0;
+    right:-80px;
     bottom:0;
     outline:1px solid gold;
-    width:200px;
-    height:200px;
+    width:400px;
+    height:400px;
 }
 
  
@@ -218,16 +319,11 @@ body {
     top: 50%;
 } */
 
-.uxui-container .habit .habit-logo {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-}
-
 /* 갤러리 */
 
 .art-work {
-    margin: 0 auto;
+    margin: 200px auto;
+    margin-top: 100px;
     display: flex;
     justify-content: end;
     position: relative;
@@ -242,12 +338,12 @@ body {
     align-items: center;  
   top: 50%;
   transform: translateY(-50%);
-  background: #fff;
-  border: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.5);
+  /* border: 1px solid #ddd; */
   cursor: pointer;
   font-size: 2rem;
-  border-radius: 50%;
-  width: 40px;
+  border-radius: 30%;
+  width: 30px;
   height: 40px;
 }
 
@@ -274,7 +370,7 @@ body {
 
 .gallery {
   overflow: hidden;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 2rem auto; 
 }
 
@@ -284,7 +380,7 @@ body {
   
 
 .gallery img {
-  width: 200px;
+  width: 300px;
   flex-shrink: 0;
   margin: 0 5px;
   border-radius: 10px;
@@ -332,4 +428,15 @@ footer {
     .main-container h1 {
         font-size:15vw;
     }
+}
+
+@keyframes goLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-120vw); /* 화면 밖으로 나가기 */
+    opacity: 0.8;
+  }
 }
