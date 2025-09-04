@@ -141,33 +141,11 @@
                             <p>
                                에쁨의 루틴 '헤빗' <br>사용자의 데이터를 기반으로 스타일링 실패를 줄이고 나만의 루틴을 만들 수 있도록 돕는 서비스
                             </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde repellat maiores nisi deleniti aut voluptates blanditiis eius corrupti magni, autem molestias dignissimos quae voluptate in asperiores, cum ut possimus quasi?
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde repellat maiores nisi deleniti aut voluptates blanditiis eius corrupti magni, autem molestias dignissimos quae voluptate in asperiores, cum ut possimus quasi?
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde repellat maiores nisi deleniti aut voluptates blanditiis eius corrupti magni, autem molestias dignissimos quae voluptate in asperiores, cum ut possimus quasi?
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde repellat maiores nisi deleniti aut voluptates blanditiis eius corrupti magni, autem molestias dignissimos quae voluptate in asperiores, cum ut possimus quasi?
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde repellat maiores nisi deleniti aut voluptates blanditiis eius corrupti magni, autem molestias dignissimos quae voluptate in asperiores, cum ut possimus quasi?
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde repellat maiores nisi deleniti aut voluptates blanditiis eius corrupti magni, autem molestias dignissimos quae voluptate in asperiores, cum ut possimus quasi?
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde repellat maiores nisi deleniti aut voluptates blanditiis eius corrupti magni, autem molestias dignissimos quae voluptate in asperiores, cum ut possimus quasi?
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde repellat maiores nisi deleniti aut voluptates blanditiis eius corrupti magni, autem molestias dignissimos quae voluptate in asperiores, cum ut possimus quasi?
-                            </p>
+                            <img src="./images/sparkle/19.svg" alt="ui-1">
+                            <img src="./images/sparkle/20.svg" alt="ui-2">
                         </div>
                     </li>
-                    <li class="habit active">
+                    <li class="habit">
                         <img src="./images/porfolio_img/logo_habit.svg" class="habit-logo">
                         <div class="char">
                             <img src="./images/porfolio_img/habit.svg" class="habit-rabit">
@@ -246,15 +224,23 @@
     </div>
 
     <script>
-        const uxuiList = document.querySelector('.uxui-container .list');
-        uxuiList.addEventListener('click', (e) => {
-            
-        })
- 
-
-        // document.querySelector('.sparkle').addEventListener('click', (e) => {
-        //     e.currentTarget.classList.add('active')
-        // })
+        // UXUI 리스트 클릭 이벤트
+        const listItems = document.querySelectorAll('.uxui-container .list li');
+        
+        // 각 리스트 아이템에 클릭 이벤트 추가
+        listItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                // 다른 모든 아이템 비활성화
+                listItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // 현재 아이템 활성화/비활성화 토글
+                item.classList.toggle('active');
+            });
+        });
     </script>
 </body>
 </html>

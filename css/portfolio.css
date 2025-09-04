@@ -250,30 +250,33 @@ body {
 }
 
 .uxui-container .list li {
-    width: 330px; 
+    width: 300px; 
     border-radius: 30px;
     position: relative;
     overflow: hidden;
-    padding:20px;
+    padding: 20px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 .uxui-container .list li.active {
-    width:1000px;
+    width: 1000px;
+    transform: translateX(-350px);
 }
 
 .uxui-container .list li.active .details {
-    opacity:1;
-    translate:0 0;
+    opacity: 1;
+    translate: 0 0;
 }
 
 .uxui-container .details {
     /* outline:1px solid red; */
-    overflow-y:auto;
-    height:452px;
-    margin-top:70px;
-    opacity:0;
-    translate:0 20px;
-    transition:0.5s;
+    overflow-y: auto;
+    height: 452px;
+    margin-top: 70px;
+    opacity: 0;
+    translate: 0 20px;
+    transition: 0.5s;
 }
 
 .uxui-container .details p {
@@ -294,7 +297,7 @@ body {
 .uxui-container .sparkle .sparkle-charactor {
     position: absolute;
     right: -120px;
-    top: 30%;
+    bottom: 0;
 }
 
 
