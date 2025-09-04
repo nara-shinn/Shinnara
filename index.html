@@ -139,7 +139,7 @@
 
                         <div class="details">
                             <p>
-                               에쁨의 루틴 '헤빗' <br>사용자의 데이터를 기반으로 스타일링 실패를 줄이고 나만의 루틴을 만들 수 있도록 돕는 서비스
+                               운동카운팅 앱 개발
                             </p>
                             <img src="./images/sparkle/19.svg" alt="ui-1">
                             <img src="./images/sparkle/20.svg" alt="ui-2">
@@ -241,6 +241,45 @@
                 item.classList.toggle('active');
             });
         });
+
+        // 이미지 갤러리 슬라이드 기능
+        const galleryTrack = document.querySelector('.gallery-track');
+        const leftBtn = document.querySelector('.L-btn');
+        const rightBtn = document.querySelector('.R-btn');
+        
+        let currentIndex = 0;
+        const imagesPerView = 3; // 한 번에 보여줄 이미지 개수
+        const totalImages = document.querySelectorAll('.gallery-track img').length;
+        const maxIndex = Math.max(0, totalImages - imagesPerView);
+        
+        // 이미지 너비 + 간격을 계산 (300px + 20px)
+        const slideWidth = 320;
+        
+        function updateGallery() {
+            const translateX = -currentIndex * slideWidth;
+            galleryTrack.style.transform = `translateX(${translateX}px)`;
+            
+            // 버튼 활성화/비활성화 상태 업데이트
+            leftBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+            rightBtn.style.opacity = currentIndex >= maxIndex ? '0.5' : '1';
+        }
+        
+        leftBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateGallery();
+            }
+        });
+        
+        rightBtn.addEventListener('click', () => {
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateGallery();
+            }
+        });
+        
+        // 초기 상태 설정
+        updateGallery();
     </script>
 </body>
 </html>
