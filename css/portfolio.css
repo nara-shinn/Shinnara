@@ -1,11 +1,17 @@
 @charset "utf-8";
 
+
 html, 
 body {
+    font-family: 'Inconsolata', monospace, 
+    'Gothic A1', sans-serif;
     width: 100%;
     height: 100%;
     overflow-x: hidden; 
+
 }
+
+
 
 .all-container {
       
@@ -90,7 +96,7 @@ body {
 
 .main-container h1 {
     font-size: 160px;
-    font-weight: 700; 
+    font-weight: 600; 
     line-height:1;
     white-space:nowrap;
 }
@@ -99,8 +105,8 @@ body {
     width: 100%;
     max-width: 1000px;
     padding-left: 300px;
-    font-size: 20px;
-    line-height: 2.5rem;
+    font-size: 1rem;
+    line-height: 2rem;
     text-align: justify;
 }
 
@@ -198,6 +204,7 @@ body {
 }
 
 .tag-container .tag li{
+    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -260,7 +267,7 @@ body {
 }
 
 .uxui-container .details {
-    outline:1px solid red;
+    /* outline:1px solid red; */
     overflow-y:auto;
     height:452px;
     margin-top:70px;
@@ -270,8 +277,9 @@ body {
 }
 
 .uxui-container .details p {
-    font-size:30px;
+    font: size 1rem;
     line-height:2;
+    margin-top: 20px;
 }
 
 .uxui-container .sparkle {
@@ -305,7 +313,7 @@ body {
    position: absolute;
     right:-80px;
     bottom:0;
-    outline:1px solid gold;
+    /* outline:1px solid gold; */
     width:400px;
     height:400px;
 }
@@ -327,7 +335,7 @@ body {
     display: flex;
     justify-content: end;
     position: relative;
-    outline:1px solid red;
+    /* outline:1px solid red; */
     width:100%;
     max-width:900px;
 }
